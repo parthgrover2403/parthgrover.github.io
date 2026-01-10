@@ -5,11 +5,11 @@ hardware validation, and system-level engineering.
 
 ## Projects
 
-- **Luggage-Carrying Robot – Power & Battery System**
-- **Lead-Acid Battery Charger & Monitoring PCB**
-- **Analog IC Design Labs (Current Mirrors, Intrinsic Gain)**
-- **Common-Centroid Capacitor Layout**
-- **3D NAND Flash / TEG Characterization**
+- [Capstone: DC-DC Buck Converter & Battery Charging System](projects/capstone)
+- [Analog IC Design: Two-Stage Miller-Compensated Op-Amp](projects/opamp)
+- [RF Systems: Superheterodyne Radio Receiver](projects/radio)
+- [Samsung Fellowship: NAND Flash PCB & Device Characterization](projects/nand)
+- [Digital VLSI Design: 8-bit Pipelined Adder with Buffered H-clock Tree](projects/adder)
 
 ## Contact
 
