@@ -43,8 +43,15 @@ charging, monitoring, and protection.
 ## Evidence & Documentation
 
 ### PCB and Hardware
-![Assembled Buck Converter PCB](../assets/capstone/Buck_converter_pcb.png)
-![Assembled Battery Charging PCB](../assets/capstone/Battery_charging_pcb.png)
+<p align="center">
+  <img src="../assets/capstone/Buck_converter_pcb.png" width="600">
+</p>
+<p align="center"><em>Assembled PCB implementing DC-DC conversion.</em></p>
+
+<p align="center">
+  <img src="../assets/capstone/Battery_charging_pcb.png" width="600">
+</p>
+<p align="center"><em>Assembled PCB implementing battery charging circuit.</em></p>
 
 ### Schematic
 ![Buck Converter Schematic](../assets/capstone/Buck_converter_schematic.png)
@@ -61,5 +68,3 @@ charging, monitoring, and protection.
 - [Buck Converter PCB Powering Jetson Nano – YouTube](https://www.youtube.com/shorts/Y9bEtNm3nqs)
 - [Battery Charging PCB Drawing Current – YouTube](https://youtube.com/shorts/oKZRPvmx3F4?feature=share)
 - [Battery Charging PCB Charging Lead-Acid Battery – YouTube](https://youtube.com/shorts/u5XXYdZQjoI?feature=share)
-
-
