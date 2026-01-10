@@ -51,12 +51,15 @@ charging, monitoring, and protection.
 ![Battery Charging Schematic](../assets/capstone/battery_charging_schematic.png)
 
 ### Measurements
-![Buck Converter Output Voltage](../assets/capstone/buck_output_scope.png)
-![Battery Charging Current](../assets/capstone/battery_charge_current.png)
+![Buck Converter Output Voltage](../assets/capstone/Buck_test1.png)
+![Buck Converter Output Voltage](../assets/capstone/Buck_test2.png)
+![Buck Converter Output Voltage](../assets/capstone/Buck_test3.png)
+![Battery Charging Current](../assets/capstone/Battery_test1.png)
+![Battery Charging Current](../assets/capstone/Battery_test2.png)
 
 ### System Demonstration
-- [Buck Converter Power System Demo – YouTube](https://www.youtube.com/shorts/Y9bEtNm3nqs)
-- [Battery Charging Power System Demo – YouTube](https://youtube.com/shorts/oKZRPvmx3F4?feature=share)
-- [Battery Charging Power System Demo – YouTube](https://youtube.com/shorts/u5XXYdZQjoI?feature=share)
+- [Buck Converter PCB Powering Jetson Nano – YouTube](https://www.youtube.com/shorts/Y9bEtNm3nqs)
+- [Battery Charging PCB Drawing Current – YouTube](https://youtube.com/shorts/oKZRPvmx3F4?feature=share)
+- [Battery Charging PCB Charging Lead-Acid Battery – YouTube](https://youtube.com/shorts/u5XXYdZQjoI?feature=share)
 
 
