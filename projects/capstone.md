@@ -42,27 +42,54 @@ charging, monitoring, and protection.
 
 ## Evidence & Documentation
 
+### Schematic
+<p align="center">
+  <img src="../assets/capstone/Buck_converter_schematic.png" width="600">
+</p>
+<p align="center"><em>Figure 1: Schematic for DC-DC conversion.</em></p>
+
+<p align="center">
+  <img src="../assets/capstone/battery_charging_schematic.png" width="600">
+</p>
+<p align="center"><em>Figure 2: Schematic for battery charging circuit.</em></p>
+
 ### PCB and Hardware
 <p align="center">
   <img src="../assets/capstone/Buck_converter_pcb.png" width="600">
 </p>
-<p align="center"><em>Assembled PCB implementing DC-DC conversion.</em></p>
+<p align="center"><em>Figure 3: Assembled PCB implementing DC-DC conversion.</em></p>
 
 <p align="center">
   <img src="../assets/capstone/Battery_charging_pcb.png" width="600">
 </p>
-<p align="center"><em>Assembled PCB implementing battery charging circuit.</em></p>
-
-### Schematic
-![Buck Converter Schematic](../assets/capstone/Buck_converter_schematic.png)
-![Battery Charging Schematic](../assets/capstone/battery_charging_schematic.png)
+<p align="center"><em>Figure 4: Assembled PCB implementing battery charging circuit.</em></p>
 
 ### Measurements
-![Buck Converter Output Voltage](../assets/capstone/Buck_test1.png)
-![Buck Converter Output Voltage](../assets/capstone/Buck_test2.png)
-![Buck Converter Output Voltage](../assets/capstone/Buck_test3.png)
-![Battery Charging Current](../assets/capstone/Battery_test1.png)
-![Battery Charging Current](../assets/capstone/Battery_test2.png)
+
+<p align="center">
+  <img src="../assets/capstone/Buck_test1.png" width="600">
+</p>
+<p align="center"><em>Figure 5: Measured 5V buck converter output showing <50 mV ripple under nominal load.</em></p>
+ 
+<p align="center">
+  <img src="../assets/capstone/Buck_test2.png" width="600">
+</p>
+<p align="center"><em>Figure 6: Current supplied by the buck converter under different loads.</em></p>
+
+<p align="center">
+  <img src="../assets/capstone/Buck_test3.png" width="600">
+</p>
+<p align="center"><em>Figure 7: Varying input voltage to test the stability of the output voltage.</em></p>
+ 
+<p align="center">
+  <img src="../assets/capstone/Battery_test1.png" width="600">
+</p>
+<p align="center"><em>Figure 8: Current drawn by the battery while charging.</em></p>
+
+<p align="center">
+  <img src="../assets/capstone/Battery_test2.png" width="600">
+</p>
+<p align="center"><em>Figure 9: Battery voltage changing over time while charging.</em></p>
 
 ### System Demonstration
 - [Buck Converter PCB Powering Jetson Nano – YouTube](https://www.youtube.com/shorts/Y9bEtNm3nqs)
