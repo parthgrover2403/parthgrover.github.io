@@ -39,3 +39,24 @@ charging, monitoring, and protection.
 - Importance of regulator efficiency in battery-powered systems
 - Impact of component selection on thermal performance
 - Practical challenges of power integrity in mixed-load systems
+
+## Evidence & Documentation
+
+### PCB and Hardware
+![Assembled Buck Converter PCB](../assets/capstone/Buck_converter_pcb.png)
+![Assembled Battery Charging PCB](../assets/capstone/Battery_charging_pcb.png)
+
+### Schematic
+![Buck Converter Schematic](../assets/capstone/Buck_converter_schematic.png)
+![Battery Charging Schematic](../assets/capstone/battery_charging_schematic.png)
+
+### Measurements
+![Buck Converter Output Voltage](../assets/capstone/buck_output_scope.png)
+![Battery Charging Current](../assets/capstone/battery_charge_current.png)
+
+### System Demonstration
+- [Buck Converter Power System Demo – YouTube](https://www.youtube.com/shorts/Y9bEtNm3nqs)
+- [Battery Charging Power System Demo – YouTube](https://youtube.com/shorts/oKZRPvmx3F4?feature=share)
+- [Battery Charging Power System Demo – YouTube](https://youtube.com/shorts/u5XXYdZQjoI?feature=share)
+
+
