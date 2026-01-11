@@ -6,7 +6,7 @@ hardware validation, and system-level engineering.
 ## Projects
 
 - [Capstone: DC-DC Buck Converter & Battery Charging System](projects/capstone)
-- [Samsung Austin Semiconductor Fellowship: NAND Flash PCB & Device Characterization](projects/nand)
+- [Samsung Austin Semiconductor Fellowship: NAND Flash PCB & Device Characterization](projects/samsung)
 - [Analog IC Design: Two-Stage Miller-Compensated Op-Amp](projects/opamp)
 - [RF Systems: Superheterodyne Radio Receiver](projects/radio)
 - [Digital VLSI Design: 8-bit Pipelined Adder with Buffered H-clock Tree](projects/adder)
