@@ -97,7 +97,7 @@ The final board successfully interfaced with the NAND Flash device and enabled
 parameter extraction through the custom test setup.
 
 <p align="center">
-  <img src="../assets/samsung/nand/assembled.jpg" width="550">
+  <img src="../assets/samsung/nand/assembled.png" width="600">
 </p>
 <p align="center"><em>Figure 3: Assembled NAND Flash testbench PCB.</em></p>
 
