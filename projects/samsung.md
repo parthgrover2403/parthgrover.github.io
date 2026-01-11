@@ -23,12 +23,12 @@ switching dynamics.
 - Direct probing of on-chip pads on memristor test structures
 
 <p align="center">
-  <img src="../assets/samsung/memristor/device.jpg" width="600">
+  <img src="../assets/samsung/memristor/device.png" width="600">
 </p>
 <p align="center"><em>Figure 1: Optical image of the memristor device under test.</em></p>
 
 <p align="center">
-  <img src="../assets/samsung/memristor/probing.jpg" width="600">
+  <img src="../assets/samsung/memristor/probing.png" width="600">
 </p>
 <p align="center"><em>Figure 2: Probe station setup used for electrical characterization.</em></p>
 
@@ -81,12 +81,12 @@ The PCB design underwent two iterations to address signal integrity and
 interface reliability challenges identified during bring-up.
 
 <p align="center">
-  <img src="../assets/samsung/pcb/schematic.png" width="600">
+  <img src="../assets/samsung/nand/schematic.png" width="600">
 </p>
 <p align="center"><em>Figure 1: Final schematic of the NAND Flash testbench PCB.</em></p>
 
 <p align="center">
-  <img src="../assets/samsung/pcb/layout.png" width="600">
+  <img src="../assets/samsung/nand/layout.png" width="600">
 </p>
 <p align="center"><em>Figure 2: Final PCB layout implementing the NAND Flash test interface.</em></p>
 
@@ -97,7 +97,7 @@ The final board successfully interfaced with the NAND Flash device and enabled
 parameter extraction through the custom test setup.
 
 <p align="center">
-  <img src="../assets/samsung/pcb/assembled.jpg" width="550">
+  <img src="../assets/samsung/nand/assembled.jpg" width="550">
 </p>
 <p align="center"><em>Figure 3: Assembled NAND Flash testbench PCB.</em></p>
 
