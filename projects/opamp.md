@@ -64,7 +64,7 @@ All simulations and layout were performed using Cadence Virtuoso.
 <p align="center"><em>Figure 3: Open-loop simulation testbench configuration.</em></p>
 
 <p align="center">
-  <img src="../assets/opamp/close.png" width="500">
+  <img src="../assets/opamp/closed.png" width="500">
 </p>
 <p align="center"><em>Figure 4: Closed-loop simulation testbench configuration.</em></p>
 
