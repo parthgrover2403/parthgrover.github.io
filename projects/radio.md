@@ -80,7 +80,7 @@ across the entire dial
 <p align="center">
   <img src="../assets/radio/receiver.png" width="500">
 </p>
-<p align="center"><em>Figure 1: Final chip layout including pads, op-amp core, and CMFB circuitry.</em></p>
+<p align="center"><em>Figure 1: Fully assembled Elenco 108CK AM/FM superhetrodyne receiver.</em></p>
 
 ---
 
