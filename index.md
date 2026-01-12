@@ -13,5 +13,5 @@ hardware validation, and system-level engineering.
 ## Contact
 
 - Email: parthgrover2403@gmail.com
-- GitHub: [https://github.com/parthgrover2403]
-- LinkedIn: [https://www.linkedin.com/in/parth-g-09a1341ab/]
+- GitHub: [https://github.com/parthgrover2403](https://github.com/parthgrover2403)
+- LinkedIn: [https://www.linkedin.com/Parth_Grover](https://www.linkedin.com/in/parth-g-09a1341ab/)
