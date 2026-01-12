@@ -73,33 +73,33 @@ All simulations and layout were performed using Cadence Virtuoso.
 ## Simulation & Verification
 
 <p align="center">
-  <img src="../assets/opamp/gain_gbw.png" width="550">
+  <img src="../assets/opamp/gain.png" width="500">
 </p>
-<p align="center"><em>Post-layout AC response showing DC gain and unity-gain bandwidth.</em></p>
+<p align="center"><em>Figure 5: Post-layout AC response showing DC gain.</em></p>
 
 <p align="center">
-  <img src="../assets/opamp/slew_rate.png" width="550">
+  <img src="../assets/opamp/slew_rate.png" width="500">
 </p>
-<p align="center"><em>Transient simulation demonstrating slew rate performance.</em></p>
+<p align="center"><em>Figure 6: Transient simulation demonstrating slew rate performance.</em></p>
 
 <p align="center">
-  <img src="../assets/opamp/noise.png" width="550">
+  <img src="../assets/opamp/noise.png" width="500">
 </p>
-<p align="center"><em>Input-referred noise integrated from 1 Hz to 100 MHz.</em></p>
+<p align="center"><em>Figure 7: Input-referred noise integrated from 1 Hz to 100 MHz.</em></p>
 
 <p align="center">
-  <img src="../assets/opamp/im3.png" width="550">
+  <img src="../assets/opamp/im3.png" width="500">
 </p>
-<p align="center"><em>IM3 distortion analysis using a 1 Vpp, 1 MHz two-tone input.</em></p>
+<p align="center"><em>Figure 8: IM3 distortion analysis using a 1 Vpp, 1 MHz two-tone input.</em></p>
 
 ---
 
 ## Layout & Post-Layout Results
 
 <p align="center">
-  <img src="../assets/opamp/layout.png" width="650">
+  <img src="../assets/opamp/layout.png" width="500">
 </p>
-<p align="center"><em>Final chip layout including pads, op-amp core, and CMFB circuitry.</em></p>
+<p align="center"><em>Figure 9: Final chip layout including pads, op-amp core, and CMFB circuitry.</em></p>
 
 ### Post-Layout Performance Summary
 
