@@ -19,8 +19,8 @@ validated through alignment procedures and dynamic measurements.
 - Superheterodyne receiver topology
 - RF input → mixer → IF amplification → demodulation → audio amplification
 - Fixed IF operation:
--- AM IF: 455 kHz
--- FM IF: 10.7 MHz
+  - AM IF: 455 kHz
+  - FM IF: 10.7 MHz
 - Local oscillator tracking maintained across the tuning range
 
 ---
