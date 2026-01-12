@@ -41,64 +41,58 @@ audio requirements
 
 ## FM Receiver Design & Analysis
 - Implemented FM demodulation using a ratio detector
--- Recovers audio from frequency deviation rather than amplitude variation
--- Provides inherent noise immunity and limiting behavior
+  - Recovers audio from frequency deviation rather than amplitude variation
+  - Provides inherent noise immunity and limiting behavior
 - Integrated Automatic Frequency Control (AFC) to correct local oscillator
 drift
--- Uses a varactor diode whose capacitance varies with control voltage
--- Compensates for temperature and supply-induced frequency shifts
+  - Uses a varactor diode whose capacitance varies with control voltage
+  - Compensates for temperature and supply-induced frequency shifts
 
 ---
 
 ## Audio Amplification
 Designed and evaluated two Class-AB audio amplification stages:
 
-LM386 IC-based amplifier
-
-Five-transistor discrete Class-AB amplifier
+| Amplifier Type | Description |
+|--------|--------|
+| LM386 IC | Compact integrated audio amplifier |
+| Discrete | Five-transistor Class AB amplifier |
 
 Class-AB operation was selected to balance efficiency and signal fidelity,
 providing high theoretical efficiency while eliminating crossover distortion
 through controlled biasing.
 
-RF Alignment & Tracking
+---
 
-Performed receiver alignment using a dual-material tuning tool:
+## RF Alignment & Tracking
+- Performed receiver alignment using a dual-material tuning tool:
+  - Brass tip to decrease inductance
+  - Iron tip to increase inductance
 
-Brass tip to decrease inductance
+- Ensured accurate oscillator tracking:
+  - Inductor adjustment at the low end of the tuning range
+  - Trimmer capacitor adjustment at the high end
 
-Iron tip to increase inductance
-
-Ensured accurate oscillator tracking:
-
-Inductor adjustment at the low end of the tuning range
-
-Trimmer capacitor adjustment at the high end
-
-Maintained local oscillator frequency exactly one IF above the tuned station
+- Maintained local oscillator frequency exactly one IF above the tuned station
 across the entire dial
 
-Tools & Techniques
+---
 
-Through-hole soldering and hardware debugging
+## Tools & Techniques
 
-RF alignment and tuning
+- Through-hole soldering and hardware debugging
+- RF alignment and tuning
+- Frequency-domain signal analysis
+- Analog feedback control (AGC, AFC)
+- Bandpass filter characterization
+- AM and FM demodulation principles
 
-Frequency-domain signal analysis
+---
 
-Analog feedback control (AGC, AFC)
+## Key Takeaways
 
-Bandpass filter characterization
-
-AM and FM demodulation principles
-
-Key Takeaways
-
-Practical implementation of superheterodyne receiver theory
-
-Hands-on experience with RF signal chains and analog control loops
-
-Insight into real-world non-idealities such as drift, noise, and component
+- Practical implementation of superheterodyne receiver theory
+- Hands-on experience with RF signal chains and analog control loops
+- Insight into real-world non-idealities such as drift, noise, and component
 tolerance
-
-Strong foundation for RF, mixed-signal, test, and hardware validation roles
+- Strong foundation for RF, mixed-signal, test, and hardware validation roles
