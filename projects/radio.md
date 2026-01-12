@@ -8,8 +8,8 @@ frequency conversion, intermediate-frequency (IF) processing, analog feedback
 control loops, and audio amplification.
 
 The receiver employs heterodyning to translate incoming RF signals to fixed
-intermediate frequencies—455 kHz for AM and 10.7 MHz for FM - allowing high
-selectivity and stable gain using fixed - tuned IF stages. Performance was
+intermediate frequencies (455 kHz for AM and 10.7 MHz for FM) allowing high
+selectivity and stable gain using fixed-tuned IF stages. Performance was
 validated through alignment procedures and dynamic measurements.
 
 ---
