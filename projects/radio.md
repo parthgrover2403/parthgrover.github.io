@@ -43,8 +43,7 @@ audio requirements
 - Implemented FM demodulation using a ratio detector
   - Recovers audio from frequency deviation rather than amplitude variation
   - Provides inherent noise immunity and limiting behavior
-- Integrated Automatic Frequency Control (AFC) to correct local oscillator
-drift
+- Integrated Automatic Frequency Control (AFC) to correct local oscillator drift
   - Uses a varactor diode whose capacitance varies with control voltage
   - Compensates for temperature and supply-induced frequency shifts
 
