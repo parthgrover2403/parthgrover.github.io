@@ -40,14 +40,14 @@ All simulations and layout were performed using Cadence Virtuoso.
   gain, stability, noise, and distortion verification
 
 <p align="center">
-  <img src="../assets/opamp/schematic.png" width="700">
+  <img src="../assets/opamp/schematic.png" width="500">
 </p>
-<p align="center"><em>Top-level schematic of the two-stage operational amplifier.</em></p>
+<p align="center"><em>Figure 1: Top-level schematic of the two-stage operational amplifier.</em></p>
 
 <p align="center">
-  <img src="../assets/opamp/cmfb.png" width="650">
+  <img src="../assets/opamp/cmfb.png" width="500">
 </p>
-<p align="center"><em>Common-mode feedback (CMFB) circuit used to regulate output common-mode level.</em></p>
+<p align="center"><em>Figure 2: Common-mode feedback (CMFB) circuit used to regulate output common-mode level.</em></p>
 
 ---
 
@@ -59,9 +59,14 @@ All simulations and layout were performed using Cadence Virtuoso.
 - Both differential-mode and CMFB loops independently verified for stability
 
 <p align="center">
-  <img src="../assets/opamp/testbench.png" width="650">
+  <img src="../assets/opamp/open.png" width="500">
 </p>
-<p align="center"><em>Open-loop and closed-loop simulation testbench configuration.</em></p>
+<p align="center"><em>Figure 3: Open-loop simulation testbench configuration.</em></p>
+
+<p align="center">
+  <img src="../assets/opamp/close.png" width="500">
+</p>
+<p align="center"><em>Figure 4: Closed-loop simulation testbench configuration.</em></p>
 
 ---
 
