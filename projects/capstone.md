@@ -93,5 +93,5 @@ charging, monitoring, and protection.
 
 ### System Demonstration
 - [Buck Converter PCB Powering Jetson Nano – YouTube](https://www.youtube.com/shorts/Y9bEtNm3nqs)
-- [Battery Charging PCB Drawing Current – YouTube](https://youtube.com/shorts/oKZRPvmx3F4?feature=share)
-- [Battery Charging PCB Charging Lead-Acid Battery – YouTube](https://youtube.com/shorts/u5XXYdZQjoI?feature=share)
+- [Battery Charging PCB Charging Lead-Acid Battery – YouTube](https://youtube.com/shorts/oKZRPvmx3F4?feature=share)
+- [Battery Charging PCB Drawing Current – YouTube](https://youtube.com/shorts/u5XXYdZQjoI?feature=share)
