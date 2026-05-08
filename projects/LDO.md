@@ -1,11 +1,7 @@
 # Design and Compensation of a 1.5V CMOS Low Dropout (LDO) Voltage Regulator
 
-## Overview
-Worked on characterization and test infrastructure development for emerging
-memory technologies as part of the Samsung Austin Semiconductor Fellowship program. The project
-spanned two semesters, progressing from device-level memristor characterization
-to custom PCB development for parameter extraction from commercial 3D NAND
-flash devices.
+## Problem Statement
+Designed a transistor-level 1.5V Low Dropout (LDO) voltage regulator in LTspice for a power management course final project. The objective was to maintain a regulated 1.5V output across varying load conditions while satisfying multiple analog performance constraints, including a maximum load current of 100mA, output voltage peaking below 100mV during 1mA-to-50mA load transients, load regulation better than 1%, standby error amplifier power consumption below 5mW, and operation with a fixed 100pF output capacitor. The project required complete small-signal and transient simulation verification, including pulsed load current testing with 1µs rise and fall times. The primary design challenge involved balancing transient response, loop stability, and low standby power while maintaining regulation across a wide load current range.
 
 ---
 
