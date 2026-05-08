@@ -5,6 +5,7 @@ hardware validation, and system-level engineering.
 
 ## Projects
 
+- [Design and Compensation of a 1.5V CMOS Low Dropout (LDO) Voltage Regulator](projects/LDO)
 - [Capstone: DC-DC Buck Converter & Battery Charging System](projects/capstone)
 - [Samsung Austin Semiconductor Fellowship: NAND Flash PCB & Device Characterization](projects/samsung)
 - [Analog IC Design: Two-Stage Miller-Compensated Op-Amp](projects/opamp)
