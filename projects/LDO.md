@@ -16,19 +16,31 @@ Picture here for the LDO
 | Load Regulation | < 1% |
 | Output Load Capacitance (CL) | 100 pF |
 | Standby Power Consumption | < 5 mW |
-| Phase Margin (PM) | > 45 deg |
+| Supply Voltage (VDD) | 2 V |
 
 ---
 
-## Architecture & Circuit Design
+## Architecture and Design Approach
 
-The LDO architecture was implemented using three primary blocks: a two-stage error amplifier, a PMOS pass transistor, and a resistive feedback network. The error amplifier consisted of stacked current mirror stages with differential input pairs to compare the 1V reference voltage against the feedback voltage derived from the output node. A PMOS pass device was selected as the regulating transistor to support low-dropout operation while sourcing up to 100mA load current. The pass transistor was sized analytically using long-channel MOSFET current equations and finalized at approximately 7.11mm/0.4µm (W/L) to satisfy the required current drive capability and transient response targets.
+The LDO was divided into three major functional blocks:
 
-To achieve the target output voltage of 1.5V, a resistor divider network consisting of 300kΩ and 600kΩ resistors was designed according to the standard feedback relation:
+- Two-stage error amplifier
+- PMOS pass transistor
+- Resistive feedback network
 
-Vout = Vref(1+Rf1/Rf2)
+The error amplifier utilized stacked current mirror stages with differential inputs to compare the feedback voltage against a 1V reference source. The PMOS pass device regulated current delivery to the output node while supporting low-dropout operation.
 
-Loop stability was improved through frequency compensation techniques. Initial loop gain simulations revealed an unstable phase margin at light-load conditions, motivating the addition of compensation zeros using both output capacitor ESR and Miller compensation. A 300pF Miller capacitor and 50Ω series resistor were introduced between the amplifier output and pass transistor stage to improve phase margin and suppress oscillatory transient behavior. Compensation was intentionally designed around worst-case light-load conditions, where the reduced transconductance of the pass device created the most challenging stability scenario.
+The output voltage was determined using the resistor divider relation:
+
+Vout = Vref (1+Rf2/Rf1)
+
+Using a 1V reference voltage:
+- Rf1 = 300 kΩ
+- Rf2 = 600 kΩ
+
+This produced a nominal regulated output voltage of approximately 1.5V.
+
+pictures for dc operating point, loop gain before comp, loop gain after comp
 <p align="center">
   <img src="../assets/opamp/schematic.png" width="500">
 </p>
@@ -41,12 +53,26 @@ Loop stability was improved through frequency compensation techniques. Initial l
 
 ---
 
-## Compensation & Stability
+## Key Design Parameters
 
-- Miller compensation capacitor used between the first and second stages
-- Triode-region transistor employed as a nulling element for pole-zero placement
-- Compensation designed to remain stable across PVT variations
-- Both differential-mode and CMFB loops independently verified for stability
+| Component | Value |
+|--------|--------|
+| PMOS Pass Transistor | W = 7.11mm, L = 0.4 um |
+| Error Amplifier Transistors |	W = 5 µm, L = 0.36 µm |
+| Miller Capacitor |	300 pF |
+| Miller Resistor |	50 Ω |
+| Output Capacitor	| 100 pF |
+| ESR Compensation Resistor	| 100 Ω |
+| Bias Current Sources | 0.25 mA each |
+| Supply Voltage | 2 V |
+
+One of the major design tradeoffs encountered during the project was the relationship between stability and transient response. Improving phase margin at low load currents required aggressive compensation, which reduced oscillatory behavior but also introduced bandwidth limitations. While the compensated design achieved stable transient performance during 1mA-to-50mA load switching, the loop remained more sensitive under edge-case light-load conditions due to reduced pass transistor transconductance and shifting output pole locations.
+
+Another important tradeoff involved quiescent power consumption versus amplifier gain and bandwidth. The error amplifier bias currents were intentionally minimized to meet the standby power requirement of less than 5mW. Final bias currents of 0.25mA per branch resulted in approximately 1mW total standby power dissipation, significantly below the design limit. However, lowering the amplifier current also reduced achievable loop gain and limited regulator bandwidth, highlighting a common tradeoff in low-power analog regulator design.
+
+The pass transistor sizing also required balancing multiple competing objectives. Increasing device width improved current drive capability and transient response but introduced larger parasitic capacitances that complicated frequency compensation and loop stability. Shortening transistor channel length reduced output voltage peaking during transient events but increased sensitivity to stability degradation at lighter loads.
+
+A further tradeoff explored during the project was line regulation versus low-dropout operation. Since the regulator was designed with a relatively small voltage headroom between the 2V supply and 1.5V output, maintaining accurate regulation across varying input voltages became increasingly dependent on error amplifier gain and pass transistor operation. Although line regulation was not an explicit project specification, additional DC sweep simulations were performed to evaluate regulator performance under varying supply conditions.
 
 <p align="center">
   <img src="../assets/opamp/open.png" width="500">
