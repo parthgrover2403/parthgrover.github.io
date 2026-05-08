@@ -1,108 +1,115 @@
 # Design and Compensation of a 1.5V CMOS Low Dropout (LDO) Voltage Regulator
 
 ## Problem Statement
-Designed a transistor-level 1.5V Low Dropout (LDO) voltage regulator in LTspice for a power management course final project. The objective was to maintain a regulated 1.5V output across varying load conditions while satisfying multiple analog performance constraints, including a maximum load current of 100mA, output voltage peaking below 100mV during 1mA-to-50mA load transients, load regulation better than 1%, standby error amplifier power consumption below 5mW, and operation with a fixed 100pF output capacitor. The project required complete small-signal and transient simulation verification, including pulsed load current testing with 1µs rise and fall times. The primary design challenge involved balancing transient response, loop stability, and low standby power while maintaining regulation across a wide load current range.
+Designed a transistor-level 1.5V Low Dropout (LDO) voltage regulator in LTspice for a power management course final project. The objective was to maintain a regulated 1.5V output across varying load conditions while satisfying multiple analog performance constraints. The project required complete small-signal and transient simulation verification. The primary design challenge involved balancing transient response, loop stability, and low standby power while maintaining regulation across a wide load current range.
+
+
+## Design Specifications
+
+| Parameter | Target |
+|--------|--------|
+| Output Voltage | 1.5 V |
+| Maxiumum Load Current | 100 mA |
+| Load Transient Range | 1 mA → 50 mA |
+| Maximum Output Voltage Peaking | ≤ 100mV |
+| Load Regulation | < 1% |
+| Output Load Capacitance (CL) | 100 pF |
+| Standby Power Consumption | < 5 mW |
 
 ---
 
-## Semester 1: Memristor Device Characterization
+## Architecture & Circuit Design
 
-### Objective
-To experimentally characterize memristor devices fabricated by the research
-team, focusing on electroforming, resistive switching behavior, and control of
-switching dynamics.
-
-### Experimental Setup
-- Optical inspection using Sanjscope microscope
-- Electrical probing via probe station
-- Measurements performed using Keysight B1500A Semiconductor Device Analyzer
-- Direct probing of on-chip pads on memristor test structures
+- **Input Stage:** PMOS differential pair selected to meet stringent
+  input-referred noise requirements
+- **Second Stage:** Common-source amplifier for high gain
+- **Biasing:** Current mirror-based bias network
+- **Common-Mode Feedback (CMFB):** Dedicated CMFB loop to regulate output common-mode voltage
+- **Testbenches:** Custom open-loop and closed-loop testbenches developed for
+  gain, stability, noise, and distortion verification
 
 <p align="center">
-  <img src="../assets/samsung/memristor/device.png" width="600">
+  <img src="../assets/opamp/schematic.png" width="500">
 </p>
-<p align="center"><em>Figure 1: Optical image of the memristor device under test.</em></p>
+<p align="center"><em>Figure 1: Top-level schematic of the two-stage operational amplifier.</em></p>
 
 <p align="center">
-  <img src="../assets/samsung/memristor/probing.png" width="600">
+  <img src="../assets/opamp/cmfb.png" width="500">
 </p>
-<p align="center"><em>Figure 2: Probe station setup used for electrical characterization.</em></p>
+<p align="center"><em>Figure 2: Common-mode feedback (CMFB) circuit used to regulate output common-mode level.</em></p>
 
 ---
 
-### Measurements & Results
+## Compensation & Stability
+
+- Miller compensation capacitor used between the first and second stages
+- Triode-region transistor employed as a nulling element for pole-zero placement
+- Compensation designed to remain stable across PVT variations
+- Both differential-mode and CMFB loops independently verified for stability
 
 <p align="center">
-  <img src="../assets/samsung/memristor/electroforming.png" width="600">
+  <img src="../assets/opamp/open.png" width="500">
 </p>
-<p align="center"><em>Figure 3: Electroforming behavior observed during initial device activation.</em></p>
+<p align="center"><em>Figure 3: Open-loop simulation testbench configuration.</em></p>
 
 <p align="center">
-  <img src="../assets/samsung/memristor/switching.png" width="600">
+  <img src="../assets/opamp/closed.png" width="500">
 </p>
-<p align="center"><em>Figure 4: Bipolar resistive switching behavior after successful electroforming.</em></p>
-
-<p align="center">
-  <img src="../assets/samsung/memristor/compliance.png" width="600">
-</p>
-<p align="center"><em>Figure 5: Controlled modulation of switching behavior using different compliance currents.</em></p>
+<p align="center"><em>Figure 4: Closed-loop simulation testbench configuration.</em></p>
 
 ---
 
-### Key Outcomes
-- Successfully electroformed memristor devices
-- Demonstrated repeatable resistive switching behavior
-- Established control over switching magnitude via compliance current tuning
-- Gained hands-on experience with semiconductor device characterization tools
-
----
-
-## Semester 2: 3D NAND Flash Parameter Extraction PCB
-
-### Objective
-To design and implement a custom testbench PCB capable of interfacing with and
-extracting electrical parameters from a Micron 3D NAND Flash device.
-
-### Testbench Architecture
-- NAND Flash housed in a BGA-132 socket
-- FTDI FT2232 board used for USB-to-serial communication with host computer
-- Two TXB0108 level shifters for 3.3V to 1.2V signal translation
-- On-board DC-DC regulator converting 5V to 1.2V for NAND core supply
-- Pull-up and pull-down resistors for signal conditioning
-
----
-
-### PCB Design & Iteration
-The PCB design underwent two iterations to address signal integrity and
-interface reliability challenges identified during bring-up.
+## Simulation & Verification
 
 <p align="center">
-  <img src="../assets/samsung/nand/schematic.png" width="600">
+  <img src="../assets/opamp/gain.png" width="500">
 </p>
-<p align="center"><em>Figure 1: Final schematic of the NAND Flash testbench PCB.</em></p>
+<p align="center"><em>Figure 5: Post-layout AC response showing DC gain.</em></p>
 
 <p align="center">
-  <img src="../assets/samsung/nand/layout.png" width="600">
+  <img src="../assets/opamp/slew_rate.png" width="500">
 </p>
-<p align="center"><em>Figure 2: Final PCB layout implementing the NAND Flash test interface.</em></p>
+<p align="center"><em>Figure 6: Transient simulation demonstrating slew rate performance.</em></p>
+
+<p align="center">
+  <img src="../assets/opamp/noise.png" width="500">
+</p>
+<p align="center"><em>Figure 7: Input-referred noise integrated from 1 Hz to 100 MHz.</em></p>
+
+<p align="center">
+  <img src="../assets/opamp/im3.png" width="500">
+</p>
+<p align="center"><em>Figure 8: IM3 distortion analysis using a 1 Vpp, 1 MHz two-tone input.</em></p>
 
 ---
 
-### Final Implementation
-The final board successfully interfaced with the NAND Flash device and enabled
-parameter extraction through the custom test setup.
+## Layout & Post-Layout Results
 
 <p align="center">
-  <img src="../assets/samsung/nand/assembled.png" width="600">
+  <img src="../assets/opamp/layout.png" width="500">
 </p>
-<p align="center"><em>Figure 3: Assembled NAND Flash testbench PCB.</em></p>
+<p align="center"><em>Figure 9: Final chip layout including pads, op-amp core, and CMFB circuitry.</em></p>
+
+### Post-Layout Performance Summary
+
+| Metric | Achieved |
+|------|---------|
+| DC Gain | 64.03 dB |
+| Power Dissipation | 1.298 mW |
+| GBW | 139 MHz |
+| Slew Rate | 89.98 V/µs |
+| Input-Referred Noise | 13.37 µV RMS |
+| IM3 | −59.8 dB |
+| Differential Phase Margin | 63° |
+| CMFB Phase Margin | 68.25° |
+
+All specifications were met after parasitic extraction.
 
 ---
 
-### Key Outcomes
-- Designed a functional testbench PCB for advanced memory devices
-- Gained experience interfacing with high-density NAND Flash packages
-- Learned practical challenges of voltage level translation and PCB iteration
-- Developed hardware to support silicon-level characterization
-
+## Key Learnings
+- Tradeoffs between gain, bandwidth, and power in multi-stage amplifiers
+- Importance of compensation strategy for closed-loop stability
+- Impact of parasitic extraction on analog performance
+- Noise-aware input stage selection and biasing
 
