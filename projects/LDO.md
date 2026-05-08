@@ -3,6 +3,7 @@
 ## Problem Statement
 Designed a transistor-level 1.5V Low Dropout (LDO) voltage regulator in LTspice for a power management course final project. The objective was to maintain a regulated 1.5V output across varying load conditions while satisfying multiple analog performance constraints. The project required complete small-signal and transient simulation verification. The primary design challenge involved balancing transient response, loop stability, and low standby power while maintaining regulation across a wide load current range.
 
+Picture here for the LDO
 
 ## Design Specifications
 
@@ -15,19 +16,19 @@ Designed a transistor-level 1.5V Low Dropout (LDO) voltage regulator in LTspice 
 | Load Regulation | < 1% |
 | Output Load Capacitance (CL) | 100 pF |
 | Standby Power Consumption | < 5 mW |
+| Phase Margin (PM) | > 45 deg |
 
 ---
 
 ## Architecture & Circuit Design
 
-- **Input Stage:** PMOS differential pair selected to meet stringent
-  input-referred noise requirements
-- **Second Stage:** Common-source amplifier for high gain
-- **Biasing:** Current mirror-based bias network
-- **Common-Mode Feedback (CMFB):** Dedicated CMFB loop to regulate output common-mode voltage
-- **Testbenches:** Custom open-loop and closed-loop testbenches developed for
-  gain, stability, noise, and distortion verification
+The LDO architecture was implemented using three primary blocks: a two-stage error amplifier, a PMOS pass transistor, and a resistive feedback network. The error amplifier consisted of stacked current mirror stages with differential input pairs to compare the 1V reference voltage against the feedback voltage derived from the output node. A PMOS pass device was selected as the regulating transistor to support low-dropout operation while sourcing up to 100mA load current. The pass transistor was sized analytically using long-channel MOSFET current equations and finalized at approximately 7.11mm/0.4µm (W/L) to satisfy the required current drive capability and transient response targets.
 
+To achieve the target output voltage of 1.5V, a resistor divider network consisting of 300kΩ and 600kΩ resistors was designed according to the standard feedback relation:
+
+Vout = Vref(1+Rf1/Rf2)
+
+Loop stability was improved through frequency compensation techniques. Initial loop gain simulations revealed an unstable phase margin at light-load conditions, motivating the addition of compensation zeros using both output capacitor ESR and Miller compensation. A 300pF Miller capacitor and 50Ω series resistor were introduced between the amplifier output and pass transistor stage to improve phase margin and suppress oscillatory transient behavior. Compensation was intentionally designed around worst-case light-load conditions, where the reduced transconductance of the pass device created the most challenging stability scenario.
 <p align="center">
   <img src="../assets/opamp/schematic.png" width="500">
 </p>
