@@ -143,26 +143,46 @@ Despite this, transient response remained well-controlled during load switching 
 </p>
 <p align="center"><em>Figure 9: Final chip layout including pads, op-amp core, and CMFB circuitry.</em></p>
 
-### Post-Layout Performance Summary
+## Power consumption vs. Loop Gain
+The error amplifier bias current was intentionally minimized to satisfy the standby power specification.
 
-| Metric | Achieved |
-|------|---------|
-| DC Gain | 64.03 dB |
-| Power Dissipation | 1.298 mW |
-| GBW | 139 MHz |
-| Slew Rate | 89.98 V/µs |
-| Input-Referred Noise | 13.37 µV RMS |
-| IM3 | −59.8 dB |
-| Differential Phase Margin | 63° |
-| CMFB Phase Margin | 68.25° |
+Tradeoff Effects
+| Lower Bias Current | Result |
+|--------|--------|
+| Reduced power dissipation | Improved efficiency |
+| Reduced amplifier gain |	Lower loop gain |
+| Reduced bandwidth |	Weaker regulation/stability margins |
 
-All specifications were met after parasitic extraction.
+Final standby power consumption:
+- Approximately 1mW
+- Well below the required 5mW
 
----
+## Pass Transistor Sizing Tradeoffs
+The PMOS pass transistor sizing strongly impacted:
+- Current drive capability
+- Transient response
+- Stability behavior
+- Parasitic capacitance
 
-## Key Learnings
-- Tradeoffs between gain, bandwidth, and power in multi-stage amplifiers
-- Importance of compensation strategy for closed-loop stability
-- Impact of parasitic extraction on analog performance
-- Noise-aware input stage selection and biasing
+Design Insights
+- Larger width improved load drive capability
+- Larger device parasitics complicated compensation
+- Smaller channel length reduced transient peaking
+- Light-load stability became more difficult with aggressive sizing
+
+## Simulation Results
+Load Regulation Performance
+The regulator maintained nearly constant output voltage across the full load current range.
+
+| Load Current | Output Voltage |
+|--------|--------|
+| 1 mA | 1.4999 V |
+| 100 mA |	1.4995 V |
+
+Calculate Load Regulation:
+0.013%
+
+This significantly exceeded the required specification of less than 1%.
+insert picture for the load regulation.
+
 
