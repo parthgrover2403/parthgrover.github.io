@@ -40,7 +40,6 @@ Using a 1V reference voltage:
 
 This produced a nominal regulated output voltage of approximately 1.5V.
 
-pictures for dc operating point, loop gain before comp, loop gain after comp
 <p align="center">
   <img src="../assets/opamp/schematic.png" width="500">
 </p>
@@ -66,7 +65,7 @@ pictures for dc operating point, loop gain before comp, loop gain after comp
 | Bias Current Sources | 0.25 mA each |
 | Supply Voltage | 2 V |
 
-Insert picture of DC Operating point verification for transistors
+Insert picture of DC Operating point verification for transistors, and loop gain stability
 
 <p align="center">
   <img src="../assets/opamp/open.png" width="500">
