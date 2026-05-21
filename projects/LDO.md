@@ -65,8 +65,7 @@ This produced a nominal regulated output voltage of approximately 1.5V.
 | Bias Current Sources | 0.25 mA each |
 | Supply Voltage | 2 V |
 
-Insert picture of DC Operating point verification for transistors, and loop gain stability
-
+Insert picture of DC Operating point verification for transistors
 <p align="center">
   <img src="../assets/opamp/open.png" width="500">
 </p>
@@ -93,7 +92,7 @@ Compensation Goals
 - Maintain acceptable bandwidth
 - Preserve transient response performance
 
-insert pictures of loop gain before and after compensation
+insert pictures of loop gain after compensation
 
 After compensation:
 - Typical phase margin at nominal load currents: 50°–60°
