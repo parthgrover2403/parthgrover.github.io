@@ -171,7 +171,7 @@ Design Insights
 - Light-load stability became more difficult with aggressive sizing
 
 ## Simulation Results
-Load Regulation Performance
+### Load Regulation Performance
 The regulator maintained nearly constant output voltage across the full load current range.
 
 | Load Current | Output Voltage |
@@ -185,4 +185,65 @@ Calculate Load Regulation:
 This significantly exceeded the required specification of less than 1%.
 insert picture for the load regulation.
 
+### Transient Response
+Transient simulations were performed using a pulsed current source switching between:
+- 1mA
+- 50mA
 
+with:
+- 1µs rise time
+- 1µs fall time
+
+Measured Results
+| Metric | Measured Value |
+|--------|--------|
+| Overshoot | -11 mV |
+| Undershoot |	~30 mV |
+| Peak-to-Peak Variation | ~41.5 mV |
+| Specification | <100 mV |
+
+The regulator comfortably met the transient peaking requirement.
+
+Insert Figure: “Transient Response During 1mA to 50mA Load Switching”
+
+### Line Regulation Analysis
+The input supply voltage was swept to obtain simulations to evaluate line regulation performance.
+
+Line Regulation Results
+| VDD (V) | Vout (V) |
+|--------|--------|
+| 1.7 | 1.4876 |
+| 1.8 | 1.4923 |
+| 1.9 | 1.4963 |
+| 2.0 | 1.5 |
+| 2.1 | 1.5035 |
+| 2.2 | 1.5068 |
+| 2.3 | 1.51 |
+INSERT TABLE FOR THIS DATA HERE
+
+Calculated line regulation:
+- Approximately 18.7 mV/V
+
+Key Insight
+The regulator maintained relatively stable output voltage despite varying supply conditions. The remaining variation was primarily caused by:
+- Finite error amplifier gain
+- Limited loop gain
+- Reduced voltage headroom across the pass transistor
+
+Insert Figure: “Line Regulation Sweep: Output Voltage vs. Input Supply Voltage”
+
+## Key Takeaways and Future Improvements
+### Lessons Learned
+This project demonstrated how strongly LDO stability depends on load current due to changes in pass transistor transconductance and output pole location. It also highlighted the difficulty of simultaneously optimizing:
+- Stability
+- Bandwidth
+- Transient response
+- Low standby power
+
+A major takeaway was understanding how compensation placement directly impacts both transient behavior and loop stability under different operating conditions.
+
+### Future Improvements
+- Higher-gain error amplifier design
+- Adaptive biasing for improved light-load stability
+- Improved compensation optimization
+- PSRR characterization and optimization
