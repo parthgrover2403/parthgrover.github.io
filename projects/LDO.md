@@ -70,14 +70,9 @@ This produced a nominal regulated output voltage of approximately 1.5V.
 
 Insert picture of DC Operating point verification for transistors
 <p align="center">
-  <img src="../assets/opamp/open.png" width="500">
+  <img src="../assets/LDO/LDO_DC_op.png" width="500">
 </p>
-<p align="center"><em>Figure 3: Open-loop simulation testbench configuration.</em></p>
-
-<p align="center">
-  <img src="../assets/opamp/closed.png" width="500">
-</p>
-<p align="center"><em>Figure 4: Closed-loop simulation testbench configuration.</em></p>
+<p align="center"><em>Figure 2:DC operating point of the transistors showing they all in active region.</em></p>
 
 ---
 
@@ -95,7 +90,10 @@ Compensation Goals
 - Maintain acceptable bandwidth
 - Preserve transient response performance
 
-insert pictures of loop gain after compensation
+<p align="center">
+  <img src="../assets/LDO/LDO_comp.png" width="500">
+</p>
+<p align="center"><em>Figure 3: Closed loop gain of the LDO showing Phase Margin and Unity Gain Bandwidth.</em></p>
 
 After compensation:
 - Typical phase margin at nominal load currents: 50°–60°
