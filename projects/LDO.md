@@ -3,7 +3,10 @@
 ## Project Overview
 Designed and simulated a transistor-level 1.5V CMOS Low Dropout (LDO) voltage regulator in LTspice as part of a power management course final project. The regulator was required to maintain stable output regulation across varying load conditions while meeting transient response, load regulation, and low-power standby constraints. The project emphasized analog feedback design, transistor sizing, loop compensation, and stability analysis under different operating conditions.
 
-Picture here for the LDO
+<p align="center">
+  <img src="../assets/LDO/LDO Schematic.png" width="500">
+</p>
+<p align="center"><em>Figure 1: Schematic of the designed LDO.</em></p>
 
 ## Design Specifications
 
