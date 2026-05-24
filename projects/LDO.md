@@ -91,7 +91,7 @@ After compensation:
 
 ## Key Engineering Tradeoffs
 
-Stability vs. Transient Response
+### Stability vs. Transient Response
 One of the primary design challenges involved balancing loop stability against transient response speed.
 
 Observations
@@ -106,7 +106,7 @@ At light-load conditions:
 
 Despite this, transient response remained well-controlled during load switching events.
 
-## Power consumption vs. Loop Gain
+### Power consumption vs. Loop Gain
 The error amplifier bias current was intentionally minimized to satisfy the standby power specification.
 
 Tradeoff Effects
@@ -120,7 +120,7 @@ Final standby power consumption:
 - Approximately 1mW
 - Well below the required 5mW
 
-## Pass Transistor Sizing Tradeoffs
+### Pass Transistor Sizing Tradeoffs
 The PMOS pass transistor sizing strongly impacted:
 - Current drive capability
 - Transient response
