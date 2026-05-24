@@ -43,18 +43,6 @@ Using a 1V reference voltage:
 
 This produced a nominal regulated output voltage of approximately 1.5V.
 
-<p align="center">
-  <img src="../assets/opamp/schematic.png" width="500">
-</p>
-<p align="center"><em>Figure 1: Top-level schematic of the two-stage operational amplifier.</em></p>
-
-<p align="center">
-  <img src="../assets/opamp/cmfb.png" width="500">
-</p>
-<p align="center"><em>Figure 2: Common-mode feedback (CMFB) circuit used to regulate output common-mode level.</em></p>
-
----
-
 ## Key Design Parameters
 
 | Component | Value |
@@ -68,11 +56,10 @@ This produced a nominal regulated output voltage of approximately 1.5V.
 | Bias Current Sources | 0.25 mA each |
 | Supply Voltage | 2 V |
 
-Insert picture of DC Operating point verification for transistors
 <p align="center">
   <img src="../assets/LDO/LDO_DC_op.png" width="500">
 </p>
-<p align="center"><em>Figure 2:DC operating point of the transistors showing they all in active region.</em></p>
+<p align="center"><em>Figure 2: DC operating point of the transistors showing they all in active region.</em></p>
 
 ---
 
@@ -99,25 +86,6 @@ After compensation:
 - Typical phase margin at nominal load currents: 50°–60°
 - Light-load conditions still showed reduced stability margins
 - Transient response remained within specification despite degraded edge-case phase margin
-<p align="center">
-  <img src="../assets/opamp/gain.png" width="500">
-</p>
-<p align="center"><em>Figure 5: Post-layout AC response showing DC gain.</em></p>
-
-<p align="center">
-  <img src="../assets/opamp/slew_rate.png" width="500">
-</p>
-<p align="center"><em>Figure 6: Transient simulation demonstrating slew rate performance.</em></p>
-
-<p align="center">
-  <img src="../assets/opamp/noise.png" width="500">
-</p>
-<p align="center"><em>Figure 7: Input-referred noise integrated from 1 Hz to 100 MHz.</em></p>
-
-<p align="center">
-  <img src="../assets/opamp/im3.png" width="500">
-</p>
-<p align="center"><em>Figure 8: IM3 distortion analysis using a 1 Vpp, 1 MHz two-tone input.</em></p>
 
 ---
 
@@ -137,10 +105,6 @@ At light-load conditions:
 - Phase margin degraded
 
 Despite this, transient response remained well-controlled during load switching events.
-<p align="center">
-  <img src="../assets/opamp/layout.png" width="500">
-</p>
-<p align="center"><em>Figure 9: Final chip layout including pads, op-amp core, and CMFB circuitry.</em></p>
 
 ## Power consumption vs. Loop Gain
 The error amplifier bias current was intentionally minimized to satisfy the standby power specification.
